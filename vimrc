@@ -5,7 +5,6 @@ set cursorline
 set wrap
 set showcmd
 set wildmenu
-
 set nocompatible
 filetype on
 filetype indent on
@@ -21,19 +20,17 @@ set scrolloff=5
 set autoindent
 set smartindent
 set cindent
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 set list
 set listchars=tab:▸\ ,trail:▫
-
 set hlsearch
 exec "nohlsearch"
 set incsearch
 set ignorecase
 set smartcase
 
-"molokai
 let g:rehash256 = 1
 
 "Youcompleteme
@@ -43,15 +40,13 @@ let g:ycm_server_log_level = 'info'
 let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_complete_in_strings=1
-let g:ycm_key_invoke_completion = '<c-z>'
+let g:ycm_key_invoke_completion = '<C-z>'
 set completeopt=menu,menuone
-
-noremap <c-z> <NOP>
+noremap <C-z> <NOP>
 
 let g:ycm_semantic_triggers =  {
 			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-			\ 'cs,lua,javascript': ['re!\w{2}'],
-			\ }
+			\ 'cs,lua,javascript': ['re!\w{2}'] }
 
 "ctags
 set tags=./.tags;,.tags
@@ -77,6 +72,27 @@ if !isdirectory(s:vim_tags)
    silent! call mkdir(s:vim_tags, 'p')
 endif
 
+" LeaderF
+let g:Lf_ShortcutF = '<C-p>'
+let g:Lf_ShortcutB = '<LEADER>n'
+noremap <C-n> :LeaderfMru<cr>
+noremap <LEADER>p :LeaderfFunction!<cr>
+noremap <LEADER>n :LeaderfBuffer<cr>
+noremap <LEADER>m :LeaderfTag<cr>
+let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
+let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
+let g:Lf_WorkingDirectoryMode = 'Ac'
+let g:Lf_WindowHeight = 0.30
+let g:Lf_CacheDirectory = expand('~/.vim/cache')
+let g:Lf_ShowRelativePath = 0
+let g:Lf_HideHelp = 1
+let g:Lf_StlColorscheme = 'powerline'
+let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
+
+" terminal
+noremap ss :set splitright<CR>:vsplit<CR>:terminal<CR>i
+tnoremap <C-q> <C-\><C-n>
+
 noremap j h
 noremap k j
 noremap i k
@@ -91,11 +107,15 @@ noremap n nzz
 noremap N Nzz
 noremap U <C-r>
 
+inoremap <C-q> <ESC>
+noremap ; :
 map s <nop>
 map S :w<CR>
 map Q :q<CR>
-map R :source /home/dyx/.vim/vimrc<CR>
+map R :source ~/.vim/vimrc<CR>
 map ? :nohlsearch<CR>
+map <LEADER>] <C-w>]
+map <C-f> @q
 
 map sl :set splitright<CR>:vsplit<CR>
 map sj :set nosplitright<CR>:vsplit<CR>
@@ -121,8 +141,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'tomasr/molokai'
 Plug 'ycm-core/YouCompleteMe'
-Plug 'universal-ctags/ctags'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 call plug#end()
 
