@@ -121,7 +121,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'tomasr/molokai'
 Plug 'ycm-core/YouCompleteMe'
-Plug 'universal-ctags/ctags'
 Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()
