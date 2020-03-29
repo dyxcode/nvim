@@ -43,10 +43,10 @@ let g:ycm_server_log_level = 'info'
 let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_complete_in_strings=1
-let g:ycm_key_invoke_completion = '<c-z>'
+let g:ycm_key_invoke_completion = '<C-z>'
 set completeopt=menu,menuone
 
-noremap <c-z> <NOP>
+noremap <C-z> <NOP>
 
 let g:ycm_semantic_triggers =  {
 			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
@@ -77,6 +77,24 @@ if !isdirectory(s:vim_tags)
    silent! call mkdir(s:vim_tags, 'p')
 endif
 
+" LeaderF
+let g:Lf_ShortcutF = '<C-p>'
+let g:Lf_ShortcutB = '<LEADER>n'
+noremap <C-n> :LeaderfMru<cr>
+noremap <LEADER>p :LeaderfFunction!<cr>
+noremap <LEADER>n :LeaderfBuffer<cr>
+noremap <LEADER>m :LeaderfTag<cr>
+let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
+
+let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
+let g:Lf_WorkingDirectoryMode = 'Ac'
+let g:Lf_WindowHeight = 0.30
+let g:Lf_CacheDirectory = expand('~/.vim/cache')
+let g:Lf_ShowRelativePath = 0
+let g:Lf_HideHelp = 1
+let g:Lf_StlColorscheme = 'powerline'
+let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
+
 noremap j h
 noremap k j
 noremap i k
@@ -96,6 +114,7 @@ map S :w<CR>
 map Q :q<CR>
 map R :source /home/dyx/.vim/vimrc<CR>
 map ? :nohlsearch<CR>
+map <LEADER>] g<c-]>
 
 map sl :set splitright<CR>:vsplit<CR>
 map sj :set nosplitright<CR>:vsplit<CR>
@@ -122,6 +141,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'tomasr/molokai'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 call plug#end()
 
