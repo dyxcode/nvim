@@ -31,7 +31,6 @@ set incsearch
 set ignorecase
 set smartcase
 
-"molokai
 let g:rehash256 = 1
 
 "Youcompleteme
@@ -115,6 +114,7 @@ map Q :q<CR>
 map R :source ~/.vim/vimrc<CR>
 map ? :nohlsearch<CR>
 map <LEADER>] <C-w>]
+map <C-f> @q
 
 map sl :set splitright<CR>:vsplit<CR>
 map sj :set nosplitright<CR>:vsplit<CR>
