@@ -147,3 +147,4 @@ Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 call plug#end()
 
 colorscheme molokai
+highlight Normal ctermfg=none ctermbg=none
