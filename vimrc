@@ -25,7 +25,6 @@ set softtabstop=4
 set tabstop=4
 set list
 set listchars=tab:▸\ ,trail:▫
-
 set hlsearch
 exec "nohlsearch"
 set incsearch
@@ -148,3 +147,4 @@ call plug#end()
 
 colorscheme molokai
 highlight Normal ctermfg=none ctermbg=none
+highlight NonText ctermfg=none ctermbg=none
