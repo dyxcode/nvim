@@ -5,7 +5,6 @@ set cursorline
 set wrap
 set showcmd
 set wildmenu
-
 set nocompatible
 filetype on
 filetype indent on
@@ -45,13 +44,11 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_complete_in_strings=1
 let g:ycm_key_invoke_completion = '<C-z>'
 set completeopt=menu,menuone
-
 noremap <C-z> <NOP>
 
 let g:ycm_semantic_triggers =  {
 			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-			\ 'cs,lua,javascript': ['re!\w{2}'],
-			\ }
+			\ 'cs,lua,javascript': ['re!\w{2}'] }
 
 "ctags
 set tags=./.tags;,.tags
@@ -95,6 +92,9 @@ let g:Lf_HideHelp = 1
 let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
 
+noremap ss :set splitbelow<CR>:split<CR>:res 2 <CR>:terminal<CR>j
+tnoremap <ESC> <C-\><C-n>
+
 noremap j h
 noremap k j
 noremap i k
@@ -109,7 +109,7 @@ noremap n nzz
 noremap N Nzz
 noremap U <C-r>
 
-map ; :
+noremap ; :
 map s <nop>
 map S :w<CR>
 map Q :q<CR>
