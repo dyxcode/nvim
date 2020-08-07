@@ -109,6 +109,7 @@ noremap n nzz
 noremap N Nzz
 noremap U <C-r>
 
+map ; :
 map s <nop>
 map S :w<CR>
 map Q :q<CR>
