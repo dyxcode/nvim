@@ -92,7 +92,7 @@ let g:Lf_HideHelp = 1
 let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
 
-noremap ss :set splitbelow<CR>:split<CR>:res 2 <CR>:terminal<CR>j
+noremap ss :set splitbelow<CR>:split<CR>:res 5 <CR>:terminal<CR>i
 tnoremap <ESC> <C-\><C-n>
 
 noremap j h
