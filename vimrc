@@ -80,7 +80,6 @@ noremap <LEADER>p :LeaderfFunction!<cr>
 noremap <LEADER>n :LeaderfBuffer<cr>
 noremap <LEADER>m :LeaderfTag<cr>
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
-
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
 let g:Lf_WorkingDirectoryMode = 'Ac'
 let g:Lf_WindowHeight = 0.30
@@ -90,6 +89,7 @@ let g:Lf_HideHelp = 1
 let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
 
+" terminal
 noremap ss :set splitbelow<CR>:split<CR>:res 5 <CR>:terminal<CR>i
 tnoremap <ESC> <C-\><C-n>
 
