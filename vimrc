@@ -90,7 +90,7 @@ let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
 
 " terminal
-noremap ss :set splitbelow<CR>:split<CR>:res 5 <CR>:terminal<CR>i
+noremap ss :set splitright<CR>:vsplit<CR>:terminal<CR>i
 tnoremap <ESC> <C-\><C-n>
 
 noremap j h
