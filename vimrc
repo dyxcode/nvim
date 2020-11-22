@@ -91,7 +91,7 @@ let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
 
 " terminal
 noremap ss :set splitright<CR>:vsplit<CR>:terminal<CR>i
-tnoremap <ESC> <C-\><C-n>
+tnoremap <C-q> <C-\><C-n>
 
 noremap j h
 noremap k j
@@ -107,6 +107,7 @@ noremap n nzz
 noremap N Nzz
 noremap U <C-r>
 
+inoremap <C-q> <ESC>
 noremap ; :
 map s <nop>
 map S :w<CR>
