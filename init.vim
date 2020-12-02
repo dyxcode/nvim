@@ -165,16 +165,14 @@ xmap <silent> <leader>a :<C-u>execute 'CocCommand actions.open '.visualmode()<CR
 nmap <silent> <leader>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
 
 " defx
-" 使用 ;e 切换显示文件浏览，使用 ;a 查找到当前文件位置
-nnoremap <silent> <leader>d :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()` <CR>
-nnoremap <silent> <leader>f :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
+nnoremap <silent> <C-d> :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()` <CR>
 
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
     " Define mappings
-	nnoremap <silent><buffer><expr> J
+	nnoremap <silent><buffer><expr> <C-j>
 	  \ defx#do_action('cd', ['..'])
-	nnoremap <silent><buffer><expr> L
+	nnoremap <silent><buffer><expr> <C-l>
 	  \ defx#do_action('drop')
 	nnoremap <silent><buffer><expr> p
 	  \ defx#do_action('preview')
@@ -192,8 +190,6 @@ function! s:defx_my_settings() abort
                 \ defx#do_action('new_directory')
   nnoremap <silent><buffer><expr> F
                 \ defx#do_action('new_file')
-  nnoremap <silent><buffer><expr> <C-d>
-                \ defx#do_action('remove')
   nnoremap <silent><buffer><expr> R
                 \ defx#do_action('rename')
   nnoremap <silent><buffer><expr> yy
