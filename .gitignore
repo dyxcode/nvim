@@ -1,3 +1,5 @@
 /autoload/plug.vim.old
 cache
 plugged
+.netrwhist
+.git

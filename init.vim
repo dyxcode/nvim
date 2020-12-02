@@ -121,6 +121,10 @@ call plug#end()
 
 "coc.nvim
 let g:coc_global_extensions = [
+  \ 'coc-git',
+  \ 'coc-syntax',
+  \ 'coc-pairs',
+  \ 'coc-clangd',
   \ 'coc-cmake',
   \ 'coc-json',
   \ 'coc-vimlsp',
