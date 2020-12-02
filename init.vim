@@ -212,7 +212,7 @@ call defx#custom#option('_', {
 " LeaderF
 let g:Lf_ShortcutF = '<C-p>'
 noremap <C-n> :LeaderfMru<cr>
-noremap <C-f> :LeaderfFunction!<cr>
+"noremap <C-f> :LeaderfFunction!<cr>
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
 let g:Lf_WorkingDirectoryMode = 'Ac'
