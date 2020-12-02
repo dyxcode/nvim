@@ -42,6 +42,7 @@ set wildmenu
 set ignorecase
 set smartcase
 set shortmess+=c
+set signcolumn=yes
 set inccommand=split
 set completeopt=longest,noinsert,menuone,noselect,preview
 set visualbell
@@ -121,7 +122,6 @@ call plug#end()
 "coc.nvim
 let g:coc_global_extensions = [
   \ 'coc-cmake',
-  \ 'coc-clangd',
   \ 'coc-json',
   \ 'coc-vimlsp',
   \ 'coc-actions',
@@ -237,3 +237,4 @@ colorscheme molokai
 highlight Normal  guibg=none ctermbg=none
 highlight NonText guibg=none ctermbg=none
 highlight LineNr  guibg=none ctermbg=none
+highlight SignColumn guibg=none ctermbg=none
