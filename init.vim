@@ -235,7 +235,7 @@ let g:airline#extensions#tabline#show_close_button = 0
 
 set termguicolors
 colorscheme molokai
-highlight Normal  guibg=none ctermbg=none
-highlight NonText guibg=none ctermbg=none
-highlight LineNr  guibg=none ctermbg=none
-highlight SignColumn guibg=none ctermbg=none
+highlight Normal  guibg=none
+highlight NonText guibg=none
+highlight LineNr  guibg=none
+highlight SignColumn guibg=none
