@@ -1,15 +1,5 @@
 {
-  "languageserver": {
-    "cmake": {
-      "command": "cmake-language-server",
-      "filetypes": ["cmake"],
-      "rootPatterns": [
-        "build/"
-      ],
-      "initializationOptions": {
-        "buildDirectory": "build"
-      }
-    }
-  }
+  "cmake.cmakePath": "/usr/bin/cmake",
+  "clangd.path": "/home/dyx/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
 }
 
