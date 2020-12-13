@@ -70,9 +70,9 @@ nnoremap Y y$
 nnoremap C c$
 nnoremap <LEADER><CR> K
 
-map <C-q> <ESC>
-map! <C-q> <ESC>
-tnoremap <C-q> <C-\><C-N>
+map <C-[> <ESC>
+map! <C-[> <ESC>
+tnoremap <C-[> <C-\><C-N>
 
 map s <nop>
 map S :w<CR>
@@ -109,12 +109,15 @@ Plug 'vim-airline/vim-airline'
 Plug 'tomasr/molokai'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Yggdroot/indentLine'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
 call plug#end()
 
 "coc.nvim
 let g:coc_global_extensions = [
+  \ 'coc-python',
+  \ 'coc-highlight',
   \ 'coc-git',
   \ 'coc-syntax',
   \ 'coc-pairs',
@@ -202,6 +205,10 @@ call defx#custom#option('_', {
 	\     '.mypy_cache,.pytest_cache,.git,.hg,.svn,.stversions,.netrwhist'
 	\   . ',__pycache__,.sass-cache,*.egg-info,.DS_Store,*.pyc,*.swp'
 	\ })
+
+" indentLine
+let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
+let g:indent_guides_start_level           = 2  " 从第二层开始可视化显示缩进
 
 " LeaderF
 let g:Lf_ShortcutF = '<C-p>'
