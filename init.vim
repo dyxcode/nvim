@@ -111,6 +111,9 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Yggdroot/indentLine'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+Plug 'gcmt/wildfire.vim'
+Plug 'tpope/vim-surround'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 call plug#end()
 
@@ -212,7 +215,7 @@ let g:indent_guides_start_level           = 2  " 从第二层开始可视化显�
 
 " LeaderF
 let g:Lf_ShortcutF = '<C-p>'
-noremap <C-n> :LeaderfMru<cr>
+map <C-o> :LeaderfMru<cr>
 "noremap <C-f> :LeaderfFunction!<cr>
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
@@ -233,6 +236,20 @@ let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#show_tab_count = 2
 let g:airline#extensions#tabline#tabs_label = ''
 let g:airline#extensions#tabline#show_close_button = 0
+
+" mg979/vim-visual-multi
+let g:VM_mouse_mappings = 1
+let g:VM_maps                       = {}
+let g:VM_leader                     = {'default': '\', 'visual': '\', 'buffer': 'z'}
+let g:VM_maps['Add Cursor Down']    = '<C-K>'
+let g:VM_maps['Add Cursor Up']      = '<C-I>'
+let g:VM_maps['Select All']         = '<C-A>'
+let g:VM_maps['Remove Region']      = 'q'
+let g:VM_maps['Skip Region']        = '<C-q>'
+let g:VM_maps["Undo"]               = 'u'
+let g:VM_maps["Redo"]               = 'U'
+let g:VM_custom_noremaps            = {'j':'h', 'k':'j', 'i':'k'}
+let g:VM_custom_remaps              = {'H':'I'}
 
 set termguicolors
 colorscheme molokai
