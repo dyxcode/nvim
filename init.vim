@@ -215,7 +215,7 @@ let g:indent_guides_start_level           = 2  " 从第二层开始可视化显�
 
 " LeaderF
 let g:Lf_ShortcutF = '<C-p>'
-map <C-o> :LeaderfMru<cr>
+map <C-b> :LeaderfMru<cr>
 "noremap <C-f> :LeaderfFunction!<cr>
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
@@ -237,7 +237,7 @@ let g:airline#extensions#tabline#show_tab_count = 2
 let g:airline#extensions#tabline#tabs_label = ''
 let g:airline#extensions#tabline#show_close_button = 0
 
-" mg979/vim-visual-multi
+" vim-visual-multi
 let g:VM_mouse_mappings = 1
 let g:VM_maps                       = {}
 let g:VM_leader                     = {'default': '\', 'visual': '\', 'buffer': 'z'}
